@@ -1,0 +1,61 @@
+<UserControl x:Class="GetPropsTool.Views.BoundaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#F5F5F5" FontFamily="Segoe UI">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="*"/>    
+            <RowDefinition Height="Auto"/> 
+        </Grid.RowDefinitions>
+
+        <GroupBox Grid.Row="0" Header="Creation Method :" Margin="0,0,0,10" FontWeight="Bold" BorderThickness="0">
+            <StackPanel Margin="5">
+                <RadioButton Content="1. Create Boundary with Split Lines" IsChecked="{Binding IsMethodSplitLines, Mode=TwoWay}" GroupName="Method" Margin="0,2"/>
+                <RadioButton Content="2. Create Boundary by Picking Points" IsChecked="{Binding IsMethodPickPoint, Mode=TwoWay}" GroupName="Method" Margin="0,2"/>
+            </StackPanel>
+        </GroupBox>
+
+        <StackPanel Grid.Row="1" Margin="5,0,0,10">
+            <CheckBox Content="Create Text inside boundary" IsChecked="{Binding IsCreateText}" Margin="0,3"/>
+            <CheckBox Content="Delete original boundaries &amp; split lines" IsChecked="{Binding IsDeleteOriginal}" Margin="0,3"/>
+            <CheckBox Content="Insert COG block" IsChecked="{Binding IsInsertCog}" Margin="0,3"/>
+        </StackPanel>
+
+        <Grid Grid.Row="2" Margin="0,5,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="CREATE BOUNDARY" Height="35" Margin="0,0,5,0" Background="#2E7D32" Foreground="White" FontWeight="Bold" Click="BtnCreate_Click"/>
+            <Button Grid.Column="1" Content="CLEAN DATA" Height="35" Margin="5,0,0,0" Background="#B22222" Foreground="White" FontWeight="Bold" Click="BtnClean_Click"/>
+        </Grid>
+
+        <DataGrid Grid.Row="3" ItemsSource="{Binding Boundaries}" 
+                  AutoGenerateColumns="False" IsReadOnly="True" 
+                  AlternatingRowBackground="#F0F0F0" GridLinesVisibility="All"
+                  SelectionMode="Single" SelectionUnit="FullRow"
+                  SelectionChanged="DataGrid_SelectionChanged">
+            
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Copy Data to Clipboard" Click="MenuItem_CopyData_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="No" Binding="{Binding No}" Width="35"/>
+                <DataGridTextColumn Header="Plate name" Binding="{Binding PlateName}" Width="*"/>
+                <DataGridTextColumn Header="Area(mm²)" Binding="{Binding Area, StringFormat={}{0:N2}}" Width="80"/>
+                <DataGridTextColumn Header="XCOG(mm)" Binding="{Binding XCog, StringFormat={}{0:N2}}" Width="70"/>
+                <DataGridTextColumn Header="YCOG(mm)" Binding="{Binding YCog, StringFormat={}{0:N2}}" Width="70"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border Grid.Row="4" Background="#D1E8FF" Margin="0,10,0,0" Padding="8">
+            <TextBlock Text="{Binding TotalSummary}" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#003366"/>
+        </Border>
+    </Grid>
+</UserControl>

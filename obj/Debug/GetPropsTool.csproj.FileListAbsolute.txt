@@ -1,0 +1,17 @@
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\GetPropsTool.csproj.AssemblyReference.cache
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\GetPropsTool.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\GetPropsTool.AssemblyInfoInputs.cache
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\GetPropsTool.AssemblyInfo.cs
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\GetPropsTool.csproj.CoreCompileInputs.cache
+D:\Project\Automation\VS code\testvananh\Test2\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\GetProps.13328F01.Up2Date
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\Views\CreateBoundary\BoundaryView.baml
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\Views\CreateBoundary\BoundaryView.g.cs
+D:\Project\Automation\VS code\testvananh\Test2\bin\Debug\SDS_20260406_105849.dll
+D:\Project\Automation\VS code\testvananh\Test2\bin\Debug\SDS_20260407_143102.dll
+D:\Project\Automation\VS code\testvananh\Test2\bin\Debug\SDS_20260407_144906.dll
+D:\Project\Automation\VS code\testvananh\Test2\bin\Debug\SDS_20260407_144906.pdb
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\SDS_20260407_144906_MarkupCompile.cache
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\SDS_20260407_144906.g.resources
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\SDS_20260407_144906.dll
+D:\Project\Automation\VS code\testvananh\Test2\obj\Debug\SDS_20260407_144906.pdb
